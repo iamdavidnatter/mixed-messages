@@ -6,15 +6,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="app">
-    <h1>Mixed Messages</h1>
-    <p class="subtitle">Developer Motivation Generator</p>
-
-    <section class="message-box">
-        <p id="message">Klicke auf den Button, um eine Nachricht zu generieren.</p>
+<main class="page">
+    <section class="hero">
+        <p class="eyebrow">Codecademy Project</p>
+        <h1>Mixed Messages</h1>
+        <p class="subtitle">
+            Dein zufälliger Developer-Motivationsgenerator für JavaScript, Git und GitHub.
+        </p>
     </section>
 
-    <button id="generateButton">Neue Nachricht generieren</button>
+    <section class="message-card">
+        <div class="card-header">
+            <span class="badge">Developer Message</span>
+            <span class="status-dot"></span>
+        </div>
+
+        <p id="message" class="message-text">
+            Klicke auf den Button, um deine erste Nachricht zu generieren.
+        </p>
+
+        <button id="generateButton" class="primary-button">
+            Neue Nachricht generieren
+        </button>
+    </section>
+
+    <section class="info-grid">
+        <article class="info-box">
+            <h2>JavaScript</h2>
+            <p>Die Nachricht wird dynamisch mit Arrays und Zufall erzeugt.</p>
+        </article>
+
+        <article class="info-box">
+            <h2>GitHub Actions</h2>
+            <p>CI prüft automatisch, ob das Projekt weiterhin funktioniert.</p>
+        </article>
+
+        <article class="info-box">
+            <h2>GitHub Pages</h2>
+            <p>CD veröffentlicht die Website automatisch nach dem Merge.</p>
+        </article>
+    </section>
 </main>
 
 <script src="script.js"></script>

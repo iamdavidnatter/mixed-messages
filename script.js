@@ -42,6 +42,10 @@ const endings = [
 ];
 
 function getRandomElement(array) {
+    if (array.length === 0) {
+        throw new Error('Cannot select a random element from an empty array.');
+    }
+
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
 }
@@ -53,17 +57,25 @@ function generateMessage() {
     const action = getRandomElement(actions);
     const ending = getRandomElement(endings);
 
-    return `
-==============================
-Deine Developer Message ${emoji}
-==============================
-
-Thema: ${topic}
-
-${start}, ${action} ${ending}
-
-==============================
-`;
+    return `${emoji} Thema: ${topic} — ${start}, ${action} ${ending}`;
 }
 
-console.log(generateMessage());
+function showMessage() {
+    const messageElement = document.getElementById('message');
+
+    if (messageElement) {
+        messageElement.textContent = generateMessage();
+    }
+}
+
+if (typeof document !== 'undefined') {
+    const generateButton = document.getElementById('generateButton');
+
+    if (generateButton) {
+        generateButton.addEventListener('click', showMessage);
+    }
+}
+
+if (typeof document === 'undefined') {
+    console.log(generateMessage());
+}

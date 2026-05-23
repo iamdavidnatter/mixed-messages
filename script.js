@@ -35,7 +35,15 @@ function generateMessage() {
     const action = getRandomElement(actions);
     const ending = getRandomElement(endings);
 
-    return `${start}, ${action} ${ending}`;
+    return `
+==============================
+Deine Developer Message
+==============================
+
+${start}, ${action} ${ending}
+
+==============================
+`;
 }
 
 console.log(generateMessage());

@@ -43,3 +43,7 @@ Heute programmierst du mit Fokus, löst ein kniffliges Problem und erinnerst dic
 - Pushing to GitHub
 - Creating pull requests
 - Merging branches
+
+## Author
+
+Created by David as part of the Codecademy Full-Stack Engineer Career Path.

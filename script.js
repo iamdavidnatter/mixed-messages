@@ -1,3 +1,12 @@
+const emojis = [
+    '🚀',
+    '💡',
+    '🛠️',
+    '🐛',
+    '✅',
+    '🔥'
+];
+
 const topics = [
     'JavaScript',
     'Git',
@@ -38,6 +47,7 @@ function getRandomElement(array) {
 }
 
 function generateMessage() {
+    const emoji = getRandomElement(emojis);
     const topic = getRandomElement(topics);
     const start = getRandomElement(starts);
     const action = getRandomElement(actions);
@@ -45,7 +55,7 @@ function generateMessage() {
 
     return `
 ==============================
-Deine Developer Message
+Deine Developer Message ${emoji}
 ==============================
 
 Thema: ${topic}

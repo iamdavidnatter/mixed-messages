@@ -1,0 +1,13 @@
+{
+  "name": "mixed-messages",
+  "version": "1.0.0",
+  "description": "A random developer motivation message generator.",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "check": "node --check script.js",
+    "test": "node script.js"
+  },
+  "author": "David",
+  "license": "MIT"
+}

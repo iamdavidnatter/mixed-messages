@@ -1,3 +1,10 @@
+const topics = [
+    'JavaScript',
+    'Git',
+    'GitHub',
+    'Debugging'
+];
+
 const starts = [
     'Heute programmierst du mit Fokus',
     'Heute gehst du Schritt für Schritt vor',
@@ -31,6 +38,7 @@ function getRandomElement(array) {
 }
 
 function generateMessage() {
+    const topic = getRandomElement(topics);
     const start = getRandomElement(starts);
     const action = getRandomElement(actions);
     const ending = getRandomElement(endings);
@@ -39,6 +47,8 @@ function generateMessage() {
 ==============================
 Deine Developer Message
 ==============================
+
+Thema: ${topic}
 
 ${start}, ${action} ${ending}
 
